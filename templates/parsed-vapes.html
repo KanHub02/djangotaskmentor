@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{% static '/css/bootstrap.css/' %}">
+    <title>Vapes</title>
+</head>
+<body>
+<style>
+    body{
+        background-color: #9fcdff;
+    }
+    .shows__container{
+        background-color: #0062cc;
+    }
+</style>
+<div class="container shows__container">
+    <div class="row gy-5">
+        {% for vape in vapes %}
+        <div class="col-3">
+            <div class="card">
+                <img src="{{ vape.image }}" class="card-img-top shows__img" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">{{ vape.title }}</h5>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Animes</title>
+</head>
+<body>
+    <div class="container shows__container">
+    <div class="row gy-5">
+        {% for anime in animes %}
+        <div class="col-3">
+            <div class="card">
+                <img src="{{ anime.image.url }}" class="card-img-top shows__img" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">{{ anime.title }}</h5>
+                    <p class="card-text">{{ anime.description }}</p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+
+</body>
+</html>
